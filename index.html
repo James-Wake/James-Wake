@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>James Wake</title>
-    <link rel="stylesheet" href="bulma.min.css">
-  </head>
-  <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        James Wake
-      </h1>
-      <p class="subtitle">
-        Writes Books
-      </p>
+    <style>
+        @font-face {
+            font-family: "NebulousRegular";
+            src: url("assets/font/NebulousRegular-54aV.ttf") format("truetype")
+        }
+    </style>
+    <link rel="stylesheet" href="tailwind.css">
+</head>
+
+<body class="bg-gray-900">
+    <!-- BG -->
+    <div class="bg-cone bg-top h-full absolute w-full filter blur-sm saturate-50">
     </div>
-  </section>
-  </body>
+    <!-- Header -->
+    <div class=" text-red-100 font-other text-center pt-20 z-10 relative">
+        <h1 class="text-5xl">
+            James Wake
+        </h1>
+        <p class="text-md">
+            Writes Books
+        </p>
+    </div>
+    <!-- Nav -->
+    <div class="relative font-other z-10 pt-20 text-xl text-red-100 text-center gap-1 px-10 grid md:grid-cols-3">
+        <a class="cursor-pointer border-2 border-red-100 p-1">About</a>
+        <a class="cursor-pointer border-2 border-red-100 p-1">Stories</a>
+        <a class="cursor-pointer border-2 border-red-100 p-1">Contact</a>
+    </div>
+    <!-- Embed -->
+    <div class="z-10 pt-20 relative flex justify-center">
+        <a class="twitter-timeline " data-width="300" data-height="400" data-dnt="true" data-theme="dark"
+            href="https://twitter.com/WakeBooks?ref_src=twsrc%5Etfw">Tweets by WakeBooks</a>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</body>
+
 </html>
