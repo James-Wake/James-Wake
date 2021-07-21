@@ -1,64 +1,42 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>James Wake - Writes Books</title>
+    <link href="/index.css" rel="stylesheet">
+  </head>
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>James Wake</title>
-    <style>
-        @font-face {
-            font-family: "NebulousRegular";
-            src: url("assets/font/NebulousRegular-54aV.ttf") format("truetype")
-        }
-
-        @font-face {
-            font-family: "Beon";
-            src: url("assets/font/BeonMedium.ttf") format("truetype")
-        }
-
-        @font-face {
-            font-family: "Neoneon";
-            src: url("assets/font/Neoneon.otf") format("truetype")
-        }
-        .rad-bg {
-            background: radial-gradient(circle at bottom, rgba(255,0,39,0.4) 0%, rgba(132, 0, 255,0.4) 48%, rgba(7, 0, 237, 0.4) 100%);
-        }
-    </style>
-    <link rel="stylesheet" href="tailwind.css">
-</head>
-
-<body class="bg-gray-900">
-    <!-- BG -->
-    <div class="bg-path bg-top h-full absolute w-full filter blur-sm saturate-50">
-        <div class="relative w-full h-full rad-bg"></div>
-    </div>
-    <!-- Header -->
-    <header>
-        <div class=" text-white font-NebulousRegular text-center pt-20 z-10 relative">
-                <h1 class="text-5xl">
-                    James Wake
-                </h1>
-                <p class="text-md">
-                    Writes Books
-                </p>
-        </div>
-        <!-- Nav -->
-        <div
-            class="relative font-NebulousRegular z-10 pt-20 text-xl text-white text-center gap-1 px-10 grid md:grid-cols-3">
-            <a class="cursor-pointer border-2 border-white p-1">About</a>
-            <a class="cursor-pointer border-2 border-white p-1">Stories</a>
-            <a class="cursor-pointer border-2 border-white p-1">Contact</a>
-        </div>
+  <body class="grid-container bg font-cozette">
+    <header class="header-container">
+      <h1 class="">James Wake</h1>
+      <p class="">Writes Books</p>
     </header>
-    <section class="relative font-NebulousRegular">
+    <nav class="nav-container">
+      <ul class="flex nav-list">
+        <li>
+          <a href="#news">News</a>
+        </li>
+        <li>
+          <a href="#works">Works</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
-    </section>
-    <!-- Embed -->
-    <!-- <div class="z-10 pt-20 relative flex justify-center">
-        <a class="twitter-timeline " data-width="300" data-height="400" data-dnt="true" data-theme="dark"
-            href="https://twitter.com/WakeBooks?ref_src=twsrc%5Etfw">Tweets by WakeBooks</a>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div> -->
-</body>
-
+    <main class="news-section">
+      <article class="news-card">
+        <h2>Hello!</h2>
+        <time datetime="2021-08-01">Aug 1 2021</time>
+        <p>
+          Hello and welcome! I now have a website where you can find me, my
+          writing, and any news about my writing! Currently that's only one
+          novel and a series of short stories over on the WORKS page, but the
+          sequel to THE SAPPHIRE SHADOW should be released later this month.
+        </p>
+      </article>
+    </main>
+  </body>
 </html>
