@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>James Wake - Writes Books</title>
-    <link href="./index.css" rel="stylesheet">
+    <title>James Wake - News</title>
+    <link href="./index.css" rel="stylesheet" />
   </head>
 
   <body class="grid-container bg font-cozette">
@@ -13,30 +13,67 @@
       <p class="">Writes Books</p>
     </header>
     <nav class="nav-container">
-      <ul class="flex nav-list">
-        <li>
-          <a href="#news">News</a>
+      <ul class="nav-list">
+        <li data-target="#news">
+          <a class="nav-link" href="#news">News</a>
         </li>
-        <li>
-          <a href="#works">Works</a>
+        <li data-target="#works">
+          <a class="nav-link" href="#works">Works</a>
         </li>
-        <li>
-          <a href="#contact">Contact</a>
+        <li data-target="#contact">
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
 
-    <main class="news-section">
-      <article class="news-card">
-        <h2>Hello!</h2>
-        <time datetime="2021-08-01">Aug 1 2021</time>
-        <p>
-          Hello and welcome! I now have a website where you can find me, my
-          writing, and any news about my writing! Currently that's only one
-          novel and a series of short stories over on the WORKS page, but the
-          sequel to THE SAPPHIRE SHADOW should be released later this month.
-        </p>
-      </article>
+    <main class="main-section">
+      <section id="news" class="news-section">
+        <article class="news-card">
+          <h2>Hello!</h2>
+          <time datetime="2021-08-01">Aug 1 2021</time>
+          <p>
+            Hello and welcome! I now have a website where you can find me, my
+            writing, and any news about my writing! Currently that's only one
+            novel and a series of short stories over on the WORKS page, but the
+            sequel to THE SAPPHIRE SHADOW should be released later this month.
+          </p>
+        </article>
+        <article class="news-card">
+          <h2>New Book!</h2>
+          <time datetime="2021-08-15">Aug 15 2021</time>
+          <p>
+            The sequel to THE SAPPHIRE SHADOW is officially here! THE EMERALD
+            HAVEN is available on Amazon RIGHT NOW, and will be there
+            exclusively for the next month due to the whole Kindle Unlimited
+            agreement thing. After that, it will also be on Smashwords, Wattpad,
+            and right here on this site. Enjoy! Leave a review! Please, for the
+            love of the unfeeling Amazon algorithm, leave a review!
+          </p>
+        </article>
+      </section>
+      <section id="works">works</section>
+      <section id="contact">contact</section>
     </main>
+
+    <script>
+      window.onhashchange = function () {
+        let selectedLinkEl = document.querySelector(
+          '[data-target="' + location.hash + '"]'
+        );
+        if(selectedLinkEl){
+            document.querySelectorAll('[data-target]').forEach(function(el){
+                el.classList.remove('active');
+            })
+            selectedLinkEl.classList.add('active');            
+        }
+      };
+      window.addEventListener(
+        "load",
+        function () {
+          location.hash = "news";
+        },
+        false
+      );
+    </script>
   </body>
 </html>
