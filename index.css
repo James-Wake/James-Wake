@@ -1,5 +1,4 @@
 * {
- 
   box-sizing: border-box;
 }
 
@@ -10,12 +9,18 @@ a {
 ul,
 ol {
   list-style: none;
-  margin: 0 0 0 1rem;
-  padding: 0 0 0 1rem;
+  margin: 0;
+  padding: 0;
 }
 
-h1,h2,h3,h4,h5,h6{
-    font-weight: 100;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+  margin: 0;
 }
 
 @font-face {
@@ -43,6 +48,14 @@ h1,h2,h3,h4,h5,h6{
   --font-size-large: 20px;
   --font-size-xlarge: 24px;
   --font-size-huge: 36px;
+}
+
+:any-link {
+  color: var(--bi-color-purple);
+}
+
+:any-link:hover {
+  color: var(--bi-color-blue);
 }
 
 .grid-container {
@@ -75,12 +88,22 @@ h1,h2,h3,h4,h5,h6{
         } */
 
 .book-cover {
-  background-image: url(/assets/img/sapphire-shadow-cover.jpg);
   background-repeat: no-repeat;
   background-origin: center;
   background-size: contain;
   background-position-x: center;
   background-clip: content-box;
+}
+
+.book-cover.sapphire-shadow {
+  background-image: url(/assets/img/sapphire-shadow-cover.jpg);
+}
+
+.book-cover.tbd {
+  background: linear-gradient(var(--bi-color-pink), var(--bi-color-blue));
+  background-size: 65%;
+  background-repeat: no-repeat;
+  background-position-x: center;
 }
 
 .font-cozette {
@@ -103,10 +126,9 @@ h1,h2,h3,h4,h5,h6{
   border: 3px solid var(--dark-font-color);
 }
 
-.header-container h1{
-    font-size: 48px;
-    font-weight: 100;
-    line-height: 0.1;
+.header-container h1 {
+  font-size: 48px;
+  font-weight: 100;
 }
 
 .nav-container {
@@ -122,9 +144,7 @@ h1,h2,h3,h4,h5,h6{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
-  grid-template-areas:
-    ". . . ."
-
+  grid-template-areas: ". . . .";
 }
 .nav-list li {
   font-size: var(--font-size-large);
@@ -138,18 +158,21 @@ h1,h2,h3,h4,h5,h6{
 
 .nav-link {
   display: block;
-  color: #9b4f96;
 }
 
-.nav-list li:hover, .nav-list li:focus-within, .nav-list li.active{
+.nav-list li:hover,
+.nav-list li:focus-within,
+.nav-list li.active {
   padding-top: 6px;
   background-color: var(--main-font-color);
   border-color: var(--main-font-color);
   margin-top: 0.75em;
 }
-.nav-list li:hover .nav-link, .nav-link:focus, .nav-list li.active .nav-link {
+.nav-list li:hover .nav-link,
+.nav-link:focus,
+.nav-list li.active .nav-link {
   color: var(--bi-color-blue);
-  outline: none
+  outline: none;
 }
 
 .main-section {
@@ -157,21 +180,51 @@ h1,h2,h3,h4,h5,h6{
   border: 1px solid var(--main-font-color);
   display: flex;
   flex-direction: column;
-  width:100%;
+  width: 100%;
 }
-.main-section>section{
-    display:none;    
-}
-
-
-
-.main-section>section:target{
-    display: block;
+.main-section > section {
+  display: none;
 }
 
+.main-section > section:target {
+  display: block;
+  padding: var(--padding);
+}
 
 .news-card {
   border: 1px solid var(--dark-font-color);
   margin: var(--padding);
   padding: var(--padding);
+}
+
+.work-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 30px 200px 30px;
+  grid-template-areas:
+    "img title title "
+    "img summary summary "
+    "links summary summary";
+
+  border: 1px solid var(--dark-font-color);
+  margin: var(--padding);
+  padding: var(--padding);
+}
+.work-card h3 {
+  grid-area: title;
+  text-decoration: underline;
+}
+.work-card .book-cover {
+  grid-area: img;
+}
+.work-card .summary {
+  grid-area: summary;
+  overflow: auto;
+}
+.work-card .links {
+  grid-area: links;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-large);
 }

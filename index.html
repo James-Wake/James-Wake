@@ -38,28 +38,141 @@
             sequel to THE SAPPHIRE SHADOW should be released later this month.
           </p>
         </article>
-        
       </section>
-      <section id="works">works</section>
-      <section id="contact">contact</section>
+      <section id="works" class="works-section">
+        <h2>Works</h2>
+        <p>
+          Here you can find things that I've written. I've included links both
+          to places where you can pay money for them, as well as places where
+          they can be read or downloaded for free. If you enjoy my work and want
+          to support me with a dollar, that's great and I appreciate it. If you
+          don't have a dollar, enjoy my work anyway and tell your friends! Leave
+          ratings and reviews!
+        </p>
+        <ul class="works-novels">
+          <li>
+            <article class="work-card">
+              <div class="book-cover sapphire-shadow"></div>
+              <h3>THE SAPPHIRE SHADOW</h3>
+              <div class="summary">
+                <p>
+                  Nadia loves jewels. Big ones, small ones, red ones, blue ones.
+                  But her favorite variety is the illegally acquired. She has
+                  more than enough money to buy the best. That’s never been the
+                  point. Shoplifting is her hobby, her escape. When her high
+                  school friend, Tess, offers to help her break into real
+                  burglary, how could she refuse? Tess is a technical genius -
+                  she designed and built her own right arm. Surely she can take
+                  down any security standing in their way to bigger and better
+                  loot.
+                </p>
+                <div class="more">
+                  <p>
+                    Outside the city walls, Jackson was raised in the slums.
+                    Life as a refugee was never easy, and the only way out was
+                    joining the army. Now she’s a cop, finally living inside the
+                    old sea walls. She’s supposed to be hunting Cheshire, a
+                    reclusive hacktivist stirring up unrest, but the nightly
+                    news is full of a smug young woman breaking the law and
+                    getting away with it, blowing kisses as she escapes police
+                    and private security. Theatrical, daring heists, thrilling
+                    to watch. And Jackson hates every minute of it.
+                  </p>
+
+                  <p>
+                    Meanwhile, the city they both call home is slowly tearing
+                    itself apart around them. Jackson crushes riot after riot,
+                    just part of the job. But more and more it feels wrong,
+                    hopeless, no point to any of it, no future for any of them.
+                  </p>
+
+                  <p>
+                    Nadia has given up on the future. But more and more people
+                    see her escapades and realize they can fight back. It
+                    doesn’t make sense to Nadia, not at first, but an unlikely
+                    romance starts to show her that there could be some hope,
+                    even in a broken world.
+                  </p>
+                </div>
+              </div>
+              <div class="links">
+                <a
+                  href="https://www.amazon.com/dp/B088QMZC4R"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Amazon</a
+                >
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="work-card">
+              <div class="book-cover tbd"></div>
+              <h3>THE EMERALD HAVEN</h3>
+              <div class="summary">
+                <p>COMING SOON!</p>
+              </div>
+              <div class="links"></div>
+            </article>
+          </li>
+          <li>
+            <article class="work-card">
+              <div class="book-cover tbd"></div>
+              <h3>UNTITLED FINAL BOOK IN TRILOGY</h3>
+              <div class="summary">
+                <p>COMING LESS SOON!</p>
+              </div>
+              <div class="links"></div>
+            </article>
+          </li>
+        </ul>
+
+        <article></article>
+      </section>
+      <section id="contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Questions? Comments? Concerns? Adoring praise?</p>
+
+        <p>
+          You can send all of those to
+          <a href="mailto:jameswakewritesbooks@gmail.com"
+            >jameswakewritesbooks@gmail.com</a
+          >
+        </p>
+
+        <p>
+          You can also find me on twitter
+          <a
+            href="https://twitter.com/WakeBooks"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@WakeBooks</a
+          >
+        </p>
+      </section>
     </main>
 
     <script>
-      window.onhashchange = function () {
+      function updateNavClasses() {
         let selectedLinkEl = document.querySelector(
           '[data-target="' + location.hash + '"]'
         );
-        if(selectedLinkEl){
-            document.querySelectorAll('[data-target]').forEach(function(el){
-                el.classList.remove('active');
-            })
-            selectedLinkEl.classList.add('active');            
+        if (selectedLinkEl) {
+          document.querySelectorAll("[data-target]").forEach(function (el) {
+            el.classList.remove("active");
+          });
+          selectedLinkEl.classList.add("active");
         }
-      };
+      }
+      window.onhashchange = updateNavClasses;
       window.addEventListener(
         "load",
         function () {
-          location.hash = "news";
+          if (location.hash.length > 0) {
+            updateNavClasses();
+          } else {
+            location.hash = "news";
+          }
         },
         false
       );
