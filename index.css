@@ -50,11 +50,11 @@ h6 {
   --font-size-huge: 36px;
 }
 
-:any-link {
+a {
   color: var(--bi-color-purple);
 }
 
-:any-link:hover {
+a:hover {
   color: var(--bi-color-blue);
 }
 
