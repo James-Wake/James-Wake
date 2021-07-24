@@ -63,7 +63,7 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  /* gap: var(--margin) var(--margin); */
+  /* gap: 0 var(--padding) ; */
   grid-template-areas:
     "header"
     "links"
@@ -206,7 +206,7 @@ a:hover {
     "img title title "
     "img summary summary "
     "links summary summary";
-
+  gap: var(--padding);
   border: 1px solid var(--dark-font-color);
   margin: var(--padding);
   padding: var(--padding);
