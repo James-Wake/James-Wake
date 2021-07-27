@@ -187,7 +187,7 @@ a:hover {
   display: none;
 }
 
-.main-section > section:target {
+.main-section > section.active {
   display: block;
   padding: var(--padding);
 }
@@ -196,6 +196,10 @@ a:hover {
   border: 1px solid var(--dark-font-color);
   margin: var(--padding);
   padding: var(--padding);
+}
+
+.desaturate {
+  filter: saturate(0.75);
 }
 
 .work-card {

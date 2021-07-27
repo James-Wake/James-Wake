@@ -27,7 +27,7 @@
     </nav>
 
     <main class="main-section">
-      <section id="news" class="news-section">
+      <section data-id="#news" class="news-section">
         <article class="news-card">
           <h2>Hello!</h2>
           <time datetime="2021-08-01">Aug 1 2021</time>
@@ -39,7 +39,7 @@
           </p>
         </article>
       </section>
-      <section id="works" class="works-section">
+      <section data-id="#works" class="works-section">
         <h2>Works</h2>
         <p>
           Here you can find things that I've written. I've included links both
@@ -53,7 +53,6 @@
           <h3>Novels</h3>
           <li>
             <article class="work-card">
-              <!-- <div class="book-cover sapphire-shadow"></div> -->
               <img src="./assets/img/sapphire-shadow-cover.jpg" alt="The Sapphire Shadow book cover" class="book-cover">
               <h3>THE SAPPHIRE SHADOW</h3>
               <div class="summary">
@@ -132,13 +131,13 @@
           <h3>Short Stories</h3>
           <li>
             <article class="work-card">
-              <div class="book-cover tbd"></div>
-              <h3>AliceTest</h3>
+              <img src="./assets/img/yellow_flower.jpg" alt="Close up of a yellow flower" class="book-cover desaturate">
+              <h3>Lost Hunters</h3>
               <div class="summary">
-                <p>Testing</p>
+                <p></p>
               </div>
               <div class="links">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Belchingcultist/James-Wake/raw/main/assets/works/Alices%20Adventures%20in%20Wonderland.epub">EPUB</a>
+                <a target="_blank" rel="noopener noreferrer" href="./assets/works/shorts/Lost_Hunters_COMPLETE.epub">EPUB</a>
               </div>
             </article>
           </li>
@@ -146,7 +145,7 @@
 
         <article></article>
       </section>
-      <section id="contact" class="contact-section">
+      <section data-id="#contact" class="contact-section">
         <h2>Contact</h2>
         <p>Questions? Comments? Concerns? Adoring praise?</p>
 
@@ -174,11 +173,20 @@
         let selectedLinkEl = document.querySelector(
           '[data-target="' + location.hash + '"]'
         );
+        let selectedSectionEl = document.querySelector(
+          '[data-id="' + location.hash + '"]'
+        );
         if (selectedLinkEl) {
           document.querySelectorAll("[data-target]").forEach(function (el) {
             el.classList.remove("active");
           });
           selectedLinkEl.classList.add("active");
+        }
+        if (selectedSectionEl) {
+          document.querySelectorAll("[data-id]").forEach(function (el) {
+            el.classList.remove("active");
+          });
+          selectedSectionEl.classList.add("active");
         }
       }
       window.onhashchange = updateNavClasses;
