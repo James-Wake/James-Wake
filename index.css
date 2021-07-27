@@ -58,7 +58,8 @@ a {
   color: var(--bi-color-purple);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: var(--bi-color-blue);
 }
 
@@ -186,42 +187,40 @@ a:hover, a:focus {
   flex-direction: column;
   width: 100%;
   transform-origin: top;
-  padding: var(--padding)
+  padding: var(--padding);
 }
 
 @keyframes slideDown {
-  from{
+  from {
     transform: scaleY(0);
   }
-  to{
+  to {
     transform: scaleY(1);
   }
 }
 
 @keyframes slideUp {
-  from{
+  from {
     transform: scaleY(1);
   }
-  to{
+  to {
     transform: scaleY(0);
   }
 }
 
-.slideOpen{
-  animation-name: slideDown ;
-  animation-duration: 200ms ;
+.slideOpen {
+  animation-name: slideDown;
+  animation-duration: 200ms;
   animation-timing-function: ease-out;
   animation-delay: 0s;
 }
 
-.slideClose{  
-  animation-name: slideUp ;
-  animation-duration: 150ms ;
+.slideClose {
+  animation-name: slideUp;
+  animation-duration: 150ms;
   animation-timing-function: linear;
   animation-delay: 0s;
 }
-
-
 
 .main-section > section {
   display: none;
@@ -244,7 +243,7 @@ a:hover, a:focus {
 .work-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 30px 200px 30px;
+  grid-template-rows: 1fr 200px 30px;
   grid-template-areas:
     "img title title "
     "img summary summary "
@@ -264,6 +263,10 @@ a:hover, a:focus {
 .work-card .summary {
   grid-area: summary;
   overflow: auto;
+}
+
+.work-card .summary p {
+  margin-top: var(--margin)
 }
 .work-card .links {
   grid-area: links;

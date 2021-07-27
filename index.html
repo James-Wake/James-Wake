@@ -72,34 +72,32 @@
                   down any security standing in their way to bigger and better
                   loot.
                 </p>
-                <div class="more">
-                  <p>
-                    Outside the city walls, Jackson was raised in the slums.
-                    Life as a refugee was never easy, and the only way out was
-                    joining the army. Now she’s a cop, finally living inside the
-                    old sea walls. She’s supposed to be hunting Cheshire, a
-                    reclusive hacktivist stirring up unrest, but the nightly
-                    news is full of a smug young woman breaking the law and
-                    getting away with it, blowing kisses as she escapes police
-                    and private security. Theatrical, daring heists, thrilling
-                    to watch. And Jackson hates every minute of it.
-                  </p>
+                <p>
+                  Outside the city walls, Jackson was raised in the slums. Life
+                  as a refugee was never easy, and the only way out was joining
+                  the army. Now she’s a cop, finally living inside the old sea
+                  walls. She’s supposed to be hunting Cheshire, a reclusive
+                  hacktivist stirring up unrest, but the nightly news is full of
+                  a smug young woman breaking the law and getting away with it,
+                  blowing kisses as she escapes police and private security.
+                  Theatrical, daring heists, thrilling to watch. And Jackson
+                  hates every minute of it.
+                </p>
 
-                  <p>
-                    Meanwhile, the city they both call home is slowly tearing
-                    itself apart around them. Jackson crushes riot after riot,
-                    just part of the job. But more and more it feels wrong,
-                    hopeless, no point to any of it, no future for any of them.
-                  </p>
+                <p>
+                  Meanwhile, the city they both call home is slowly tearing
+                  itself apart around them. Jackson crushes riot after riot,
+                  just part of the job. But more and more it feels wrong,
+                  hopeless, no point to any of it, no future for any of them.
+                </p>
 
-                  <p>
-                    Nadia has given up on the future. But more and more people
-                    see her escapades and realize they can fight back. It
-                    doesn’t make sense to Nadia, not at first, but an unlikely
-                    romance starts to show her that there could be some hope,
-                    even in a broken world.
-                  </p>
-                </div>
+                <p>
+                  Nadia has given up on the future. But more and more people see
+                  her escapades and realize they can fight back. It doesn’t make
+                  sense to Nadia, not at first, but an unlikely romance starts
+                  to show her that there could be some hope, even in a broken
+                  world.
+                </p>
               </div>
               <div class="links">
                 <a
@@ -188,7 +186,7 @@
           '[data-target="' + location.hash + '"]'
         );
 
-        if (selectedLinkEl && !selectedLinkEl.classList.contains('active')) {
+        if (selectedLinkEl && !selectedLinkEl.classList.contains("active")) {
           document.querySelectorAll("[data-target]").forEach(function (el) {
             el.classList.remove("active");
           });
@@ -197,6 +195,8 @@
           let mcEl = document.querySelector(".main-section");
 
           mcEl.classList.add("slideClose");
+          let hash = location.hash.substring(1);
+          document.title = `James Wake - ${hash.charAt(0).toUpperCase() + hash.slice(1)}`;
         }
       }
       window.onhashchange = updateNavClasses;
