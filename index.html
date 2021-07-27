@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>James Wake - News</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+
+  <body class="grid-container bg font-cozette">
+    <header class="header-container">
+      <h1 class="">James Wake</h1>
+      <p class="">Writes Books</p>
+    </header>
+    <nav class="nav-container">
+      <ul class="nav-list">
+        <li data-target="#news" class="active">
+          <a class="nav-link" href="#news">News</a>
+        </li>
+        <li data-target="#works">
+          <a class="nav-link" href="#works">Works</a>
+        </li>
+        <li data-target="#contact">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="main-section">
+      <section data-id="#news" class="news-section active">
+        <h2>News</h2>
+        <article class="news-card">
+          <h3>Hello!</h3>
+          <time datetime="2021-08-01">Aug 1 2021</time>
+          <p>
+            Hello and welcome! I now have a website where you can find me, my
+            writing, and any news about my writing! Currently that's only one
+            novel and a series of short stories over on the WORKS page, but the
+            sequel to THE SAPPHIRE SHADOW should be released later this month.
+          </p>
+        </article>
+      </section>
+      <section data-id="#works" class="works-section">
+        <h2>Works</h2>
+        <p>
+          Here you can find things that I've written. I've included links both
+          to places where you can pay money for them, as well as places where
+          they can be read or downloaded for free. If you enjoy my work and want
+          to support me with a dollar, that's great and I appreciate it. If you
+          don't have a dollar, enjoy my work anyway and tell your friends! Leave
+          ratings and reviews!
+        </p>
+        <ul class="works-novels">
+          <h3>Novels</h3>
+          <li>
+            <article class="work-card">
+              <img
+                src="./assets/img/sapphire-shadow-cover.jpg"
+                alt="The Sapphire Shadow book cover"
+                class="book-cover"
+              />
+              <h3>THE SAPPHIRE SHADOW</h3>
+              <div class="summary">
+                <p>
+                  Nadia loves jewels. Big ones, small ones, red ones, blue ones.
+                  But her favorite variety is the illegally acquired. She has
+                  more than enough money to buy the best. That’s never been the
+                  point. Shoplifting is her hobby, her escape. When her high
+                  school friend, Tess, offers to help her break into real
+                  burglary, how could she refuse? Tess is a technical genius -
+                  she designed and built her own right arm. Surely she can take
+                  down any security standing in their way to bigger and better
+                  loot.
+                </p>
+                <p>
+                  Outside the city walls, Jackson was raised in the slums. Life
+                  as a refugee was never easy, and the only way out was joining
+                  the army. Now she’s a cop, finally living inside the old sea
+                  walls. She’s supposed to be hunting Cheshire, a reclusive
+                  hacktivist stirring up unrest, but the nightly news is full of
+                  a smug young woman breaking the law and getting away with it,
+                  blowing kisses as she escapes police and private security.
+                  Theatrical, daring heists, thrilling to watch. And Jackson
+                  hates every minute of it.
+                </p>
+
+                <p>
+                  Meanwhile, the city they both call home is slowly tearing
+                  itself apart around them. Jackson crushes riot after riot,
+                  just part of the job. But more and more it feels wrong,
+                  hopeless, no point to any of it, no future for any of them.
+                </p>
+
+                <p>
+                  Nadia has given up on the future. But more and more people see
+                  her escapades and realize they can fight back. It doesn’t make
+                  sense to Nadia, not at first, but an unlikely romance starts
+                  to show her that there could be some hope, even in a broken
+                  world.
+                </p>
+              </div>
+              <div class="links">
+                <a
+                  href="https://www.amazon.com/dp/B088QMZC4R"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Amazon</a
+                >
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="work-card">
+              <div class="book-cover tbd"></div>
+              <h3>THE EMERALD HAVEN</h3>
+              <div class="summary">
+                <p>COMING SOON!</p>
+              </div>
+              <div class="links"></div>
+            </article>
+          </li>
+          <li>
+            <article class="work-card">
+              <div class="book-cover tbd"></div>
+              <h3>UNTITLED FINAL BOOK IN TRILOGY</h3>
+              <div class="summary">
+                <p>COMING LESS SOON!</p>
+              </div>
+              <div class="links"></div>
+            </article>
+          </li>
+        </ul>
+        <ul class="works-shorts">
+          <h3>Short Stories</h3>
+          <li>
+            <article class="work-card">
+              <img
+                src="./assets/img/yellow_flower.jpg"
+                alt="Close up of a yellow flower"
+                class="book-cover desaturate"
+              />
+              <h3>Lost Hunters</h3>
+              <div class="summary">
+                <p></p>
+              </div>
+              <div class="links">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="./assets/works/shorts/Lost_Hunters_COMPLETE.epub"
+                  >EPUB</a
+                >
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <article></article>
+      </section>
+      <section data-id="#contact" class="contact-section">
+        <h2>Contact</h2>
+        <p>Questions? Comments? Concerns? Adoring praise?</p>
+
+        <p>
+          You can send all of those to
+          <a href="mailto:jameswakewritesbooks@gmail.com"
+            >jameswakewritesbooks@gmail.com</a
+          >
+        </p>
+
+        <p>
+          You can also find me on twitter
+          <a
+            href="https://twitter.com/WakeBooks"
+            target="_blank"
+            rel="noopener noreferrer"
+            >@WakeBooks</a
+          >
+        </p>
+      </section>
+    </main>
+
+    <script>
+      function updateNavClasses() {
+        let selectedLinkEl = document.querySelector(
+          '[data-target="' + location.hash + '"]'
+        );
+
+        if (selectedLinkEl && !selectedLinkEl.classList.contains("active")) {
+          document.querySelectorAll("[data-target]").forEach(function (el) {
+            el.classList.remove("active");
+          });
+          selectedLinkEl.classList.add("active");
+
+          let mcEl = document.querySelector(".main-section");
+
+          mcEl.classList.add("slideClose");
+          let hash = location.hash.substring(1);
+          document.title = `James Wake - ${hash.charAt(0).toUpperCase() + hash.slice(1)}`;
+        }
+      }
+      window.onhashchange = updateNavClasses;
+      window.addEventListener(
+        "load",
+        function () {
+          let mcEl = document.querySelector(".main-section");
+          mcEl.addEventListener(
+            "animationend",
+            (e) => {
+              let selectedSectionEl = document.querySelector(
+                '[data-id="' + location.hash + '"]'
+              );
+              if (e.animationName === "slideDown") {
+                mcEl.classList.remove("slideOpen");
+              }
+              if (e.animationName === "slideUp") {
+                mcEl.classList.remove("slideClose");
+                document.querySelectorAll("[data-id]").forEach(function (el) {
+                  el.classList.remove("active");
+                });
+                selectedSectionEl.classList.add("active");
+                mcEl.classList.add("slideOpen");
+              }
+            },
+            false
+          );
+          if (location.hash.length > 0) {
+            updateNavClasses();
+          }
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
