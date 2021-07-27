@@ -1,3 +1,7 @@
+body {
+  overflow: scroll;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -54,7 +58,7 @@ a {
   color: var(--bi-color-purple);
 }
 
-a:hover {
+a:hover, a:focus {
   color: var(--bi-color-blue);
 }
 
@@ -162,7 +166,6 @@ a:hover {
 }
 
 .nav-list li:hover,
-.nav-list li:focus-within,
 .nav-list li.active {
   padding-top: 6px;
   background-color: var(--main-font-color);
@@ -182,14 +185,50 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+  transform-origin: top;
+  padding: var(--padding)
 }
+
+@keyframes slideDown {
+  from{
+    transform: scaleY(0);
+  }
+  to{
+    transform: scaleY(1);
+  }
+}
+
+@keyframes slideUp {
+  from{
+    transform: scaleY(1);
+  }
+  to{
+    transform: scaleY(0);
+  }
+}
+
+.slideOpen{
+  animation-name: slideDown ;
+  animation-duration: 200ms ;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+}
+
+.slideClose{  
+  animation-name: slideUp ;
+  animation-duration: 150ms ;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+}
+
+
+
 .main-section > section {
   display: none;
 }
 
 .main-section > section.active {
   display: block;
-  padding: var(--padding);
 }
 
 .news-card {

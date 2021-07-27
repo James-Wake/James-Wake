@@ -14,7 +14,7 @@
     </header>
     <nav class="nav-container">
       <ul class="nav-list">
-        <li data-target="#news">
+        <li data-target="#news" class="active">
           <a class="nav-link" href="#news">News</a>
         </li>
         <li data-target="#works">
@@ -27,9 +27,10 @@
     </nav>
 
     <main class="main-section">
-      <section data-id="#news" class="news-section">
+      <section data-id="#news" class="news-section active">
+        <h2>News</h2>
         <article class="news-card">
-          <h2>Hello!</h2>
+          <h3>Hello!</h3>
           <time datetime="2021-08-01">Aug 1 2021</time>
           <p>
             Hello and welcome! I now have a website where you can find me, my
@@ -53,7 +54,11 @@
           <h3>Novels</h3>
           <li>
             <article class="work-card">
-              <img src="./assets/img/sapphire-shadow-cover.jpg" alt="The Sapphire Shadow book cover" class="book-cover">
+              <img
+                src="./assets/img/sapphire-shadow-cover.jpg"
+                alt="The Sapphire Shadow book cover"
+                class="book-cover"
+              />
               <h3>THE SAPPHIRE SHADOW</h3>
               <div class="summary">
                 <p>
@@ -127,17 +132,26 @@
             </article>
           </li>
         </ul>
-        <ul class="works-shorts">         
+        <ul class="works-shorts">
           <h3>Short Stories</h3>
           <li>
             <article class="work-card">
-              <img src="./assets/img/yellow_flower.jpg" alt="Close up of a yellow flower" class="book-cover desaturate">
+              <img
+                src="./assets/img/yellow_flower.jpg"
+                alt="Close up of a yellow flower"
+                class="book-cover desaturate"
+              />
               <h3>Lost Hunters</h3>
               <div class="summary">
                 <p></p>
               </div>
               <div class="links">
-                <a target="_blank" rel="noopener noreferrer" href="./assets/works/shorts/Lost_Hunters_COMPLETE.epub">EPUB</a>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="./assets/works/shorts/Lost_Hunters_COMPLETE.epub"
+                  >EPUB</a
+                >
               </div>
             </article>
           </li>
@@ -173,30 +187,45 @@
         let selectedLinkEl = document.querySelector(
           '[data-target="' + location.hash + '"]'
         );
-        let selectedSectionEl = document.querySelector(
-          '[data-id="' + location.hash + '"]'
-        );
-        if (selectedLinkEl) {
+
+        if (selectedLinkEl && !selectedLinkEl.classList.contains('active')) {
           document.querySelectorAll("[data-target]").forEach(function (el) {
             el.classList.remove("active");
           });
           selectedLinkEl.classList.add("active");
-        }
-        if (selectedSectionEl) {
-          document.querySelectorAll("[data-id]").forEach(function (el) {
-            el.classList.remove("active");
-          });
-          selectedSectionEl.classList.add("active");
+
+          let mcEl = document.querySelector(".main-section");
+
+          mcEl.classList.add("slideClose");
         }
       }
       window.onhashchange = updateNavClasses;
       window.addEventListener(
         "load",
         function () {
+          let mcEl = document.querySelector(".main-section");
+          mcEl.addEventListener(
+            "animationend",
+            (e) => {
+              let selectedSectionEl = document.querySelector(
+                '[data-id="' + location.hash + '"]'
+              );
+              if (e.animationName === "slideDown") {
+                mcEl.classList.remove("slideOpen");
+              }
+              if (e.animationName === "slideUp") {
+                mcEl.classList.remove("slideClose");
+                document.querySelectorAll("[data-id]").forEach(function (el) {
+                  el.classList.remove("active");
+                });
+                selectedSectionEl.classList.add("active");
+                mcEl.classList.add("slideOpen");
+              }
+            },
+            false
+          );
           if (location.hash.length > 0) {
             updateNavClasses();
-          } else {
-            location.hash = "news";
           }
         },
         false
