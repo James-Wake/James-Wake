@@ -243,7 +243,7 @@ a:focus {
 .work-card {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr 200px 30px;
+  grid-template-rows: 1fr 200px auto;
   grid-template-areas:
     "img title title "
     "img summary summary "
@@ -263,14 +263,16 @@ a:focus {
 .work-card .summary {
   grid-area: summary;
   overflow: auto;
+  max-height: 290px;
 }
 
 .work-card .summary p {
-  margin-top: var(--margin)
+  margin: var(--margin) 0 0 0;
 }
 .work-card .links {
   grid-area: links;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: var(--font-size-large);
