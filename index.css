@@ -263,7 +263,6 @@ a:focus {
 .work-card .summary {
   grid-area: summary;
   overflow: auto;
-  max-height: 290px;
 }
 
 .work-card .summary p {
@@ -273,7 +272,7 @@ a:focus {
   grid-area: links;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   font-size: var(--font-size-large);
 }
