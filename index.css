@@ -228,7 +228,7 @@ a:focus {
   gap: var(--padding);
   border: 1px solid var(--dark-font-color);
   margin: var(--padding);
-  padding: var(--padding);
+  padding: var(--margin);
 }
 
 .book-cover {
@@ -243,6 +243,11 @@ a:focus {
 }
 .work-card .body {
   grid-area: body;
+  margin: 0 0 0 var(--margin);
+}
+
+.underline{
+  text-decoration: underline;
 }
 
 .work-card .summary p {
@@ -273,6 +278,9 @@ a:focus {
 
   .work-card .cover-links {
     flex-direction: row;
+  }
+  .work-card .body {
+    margin: 0;
   }
 
 }
